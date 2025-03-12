@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    padding: 10px;/*silinecek*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.second,.minute,.hour{
+    display: flex;
+    gap: 10px;
+}
+.clock{
+    display: flex;
+    gap: 20px;
+    padding:20px;
+    padding-bottom: 40px;
+    background-color: rgb(29, 29, 29);
+    border-radius: 20px;
+}
+.digit-container{
+    width: 140px;
+    height: 204px;
+    font-size: 10rem;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-weight: 700;
+    position: relative;
+    perspective: 800px;
+    line-height: 1.25;
+    box-shadow:0px 0px 10px black;
+}
+.digit-bg-top-one, .digit-bg-top-two{
+    background-color: #202020;
+    width: 140px;
+    height: 102px;
+    border-bottom: 2px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.digit-bg-bottom-one, .digit-bg-bottom-two{
+    background-color: #171717;
+    width: 140px;
+    height: 102px;
+    border-top: 2px solid black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    top: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.digit-bottom{
+    position: relative;
+    top: -102px;
+}
+
+.digit-bg-top-two{
+    position: absolute;
+    /*background-color: red;*/
+    transform-origin: bottom;
+    top: 0px;
+    transform: rotateX(0deg);
+}
+.digit-bg-bottom-two{
+    /*background-color: green;*/
+    position: absolute;
+    transform-origin: top;
+    top: 102px;
+    transform: rotateX(90deg);
+}
+.flip-top{
+    animation: flip-top 1s infinite linear;
+}
+.flip-bottom{
+    animation: flip-bottom 1s infinite linear;
+}
+@keyframes flip-top {
+    0%{
+        transform: rotateX(0deg);
+    }
+    50%,100%{
+        transform: rotateX(-90deg);
+    }
+}
+@keyframes flip-bottom {
+    0%,50%{
+        transform: rotateX(90deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
