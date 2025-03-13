@@ -10,96 +10,258 @@
 </head>
 
 <body>
-    <div class="clock">
-        <div class="hour">
-            <div class="digit-container hour-tens">
-                <div class="digit-bg-top-one">
-                    <div class="digit-top hour-digit-tens">0</div>
+    <div class="clock-container">
+        <h1>SK FLIP CLOCK V1.0.0</h1>
+        <div class="clock">
+            <div class="hour">
+                <div class="digit-container hour-tens">
+                    <div class="digit-bg-top-one">
+                        <div class="digit-top hour-digit-tens">0</div>
+                    </div>
+                    <div class="digit-bg-top-two" id="hour-digit-top-tens">
+                        <div class="digit-top hour-digit-tens">0</div>
+                    </div>
+                    <div class="digit-bg-bottom-one">
+                        <div class="digit-bottom hour-digit-tens">0</div>
+                    </div>
+                    <div class="digit-bg-bottom-two" id="hour-digit-bottom-tens">
+                        <div class="digit-bottom hour-digit-tens">0</div>
+                    </div>
                 </div>
-                <div class="digit-bg-top-two" id="hour-digit-top-tens">
-                    <div class="digit-top hour-digit-tens">0</div>
-                </div>
-                <div class="digit-bg-bottom-one">
-                    <div class="digit-bottom hour-digit-tens">0</div>
-                </div>
-                <div class="digit-bg-bottom-two" id="hour-digit-bottom-tens">
-                    <div class="digit-bottom hour-digit-tens">0</div>
+                <div class="digit-container hour-ones">
+                    <div class="digit-bg-top-one">
+                        <div class="digit-top hour-digit-ones">0</div>
+                    </div>
+                    <div class="digit-bg-top-two" id="hour-digit-top-ones">
+                        <div class="digit-top hour-digit-ones">0</div>
+                    </div>
+                    <div class="digit-bg-bottom-one">
+                        <div class="digit-bottom hour-digit-ones">0</div>
+                    </div>
+                    <div class="digit-bg-bottom-two" id="hour-digit-bottom-ones">
+                        <div class="digit-bottom hour-digit-ones">0</div>
+                    </div>
                 </div>
             </div>
-            <div class="digit-container hour-ones">
-                <div class="digit-bg-top-one">
-                    <div class="digit-top hour-digit-ones">0</div>
+            <div class="minute">
+                <div class="digit-container minute-tens">
+                    <div class="digit-bg-top-one">
+                        <div class="digit-top minute-digit-tens">0</div>
+                    </div>
+                    <div class="digit-bg-top-two" id="minute-digit-top-tens">
+                        <div class="digit-top minute-digit-tens">0</div>
+                    </div>
+                    <div class="digit-bg-bottom-one">
+                        <div class="digit-bottom minute-digit-tens">0</div>
+                    </div>
+                    <div class="digit-bg-bottom-two" id="minute-digit-bottom-tens">
+                        <div class="digit-bottom minute-digit-tens">0</div>
+                    </div>
                 </div>
-                <div class="digit-bg-top-two" id="hour-digit-top-ones">
-                    <div class="digit-top hour-digit-ones">0</div>
+                <div class="digit-container minute-ones">
+                    <div class="digit-bg-top-one">
+                        <div class="digit-top minute-digit-ones">0</div>
+                    </div>
+                    <div class="digit-bg-top-two" id="minute-digit-top-ones">
+                        <div class="digit-top minute-digit-ones">0</div>
+                    </div>
+                    <div class="digit-bg-bottom-one">
+                        <div class="digit-bottom minute-digit-ones">0</div>
+                    </div>
+                    <div class="digit-bg-bottom-two" id="minute-digit-bottom-ones">
+                        <div class="digit-bottom minute-digit-ones">0</div>
+                    </div>
                 </div>
-                <div class="digit-bg-bottom-one">
-                    <div class="digit-bottom hour-digit-ones">0</div>
+            </div>
+            <div class="second">
+                <div class="digit-container second-tens">
+                    <div class="digit-bg-top-one">
+                        <div class="digit-top second-digit-tens">0</div>
+                    </div>
+                    <div class="digit-bg-top-two" id="second-digit-top-tens">
+                        <div class="digit-top second-digit-tens">0</div>
+                    </div>
+                    <div class="digit-bg-bottom-one">
+                        <div class="digit-bottom second-digit-tens">0</div>
+                    </div>
+                    <div class="digit-bg-bottom-two" id="second-digit-bottom-tens">
+                        <div class="digit-bottom second-digit-tens">0</div>
+                    </div>
                 </div>
-                <div class="digit-bg-bottom-two" id="hour-digit-bottom-ones">
-                    <div class="digit-bottom hour-digit-ones">0</div>
+                <div class="digit-container second-ones">
+                    <div class="digit-bg-top-one">
+                        <div class="digit-top second-digit-ones">0</div>
+                    </div>
+                    <div class="digit-bg-top-two" id="second-digit-top-ones">
+                        <div class="digit-top second-digit-ones">0</div>
+                    </div>
+                    <div class="digit-bg-bottom-one">
+                        <div class="digit-bottom second-digit-ones">0</div>
+                    </div>
+                    <div class="digit-bg-bottom-two" id="second-digit-bottom-ones">
+                        <div class="digit-bottom second-digit-ones">0</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="minute">
-            <div class="digit-container minute-tens">
-                <div class="digit-bg-top-one">
-                    <div class="digit-top minute-digit-tens">0</div>
+        <div class="title">
+            <h2>HOURS</h2>
+            <h2>MINUTES</h2>
+            <h2>SECONDS</h2>
+        </div>
+        <div class="date">
+            <div class="day-of-the-week">
+                <div class="mini-digit-container day-week-one">
+                    <div class="mini-digit-bg-top-one">
+                        <div class="mini-digit-top day-week-one-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-top-two" id="day-week-alp-top-one">
+                        <div class="mini-digit-top day-week-one-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-one">
+                        <div class="mini-digit-bottom day-week-one-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-two" id="day-week-alp-bottom-one">
+                        <div class="mini-digit-bottom day-week-one-alp">A</div>
+                    </div>
                 </div>
-                <div class="digit-bg-top-two" id="minute-digit-top-tens">
-                    <div class="digit-top minute-digit-tens">0</div>
+                <div class="mini-digit-container day-week-two">
+                    <div class="mini-digit-bg-top-one">
+                        <div class="mini-digit-top day-week-two-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-top-two" id="day-week-alp-top-two">
+                        <div class="mini-digit-top day-week-two-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-one">
+                        <div class="mini-digit-bottom day-week-two-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-two" id="day-week-alp-bottom-two">
+                        <div class="mini-digit-bottom day-week-two-alp">A</div>
+                    </div>
                 </div>
-                <div class="digit-bg-bottom-one">
-                    <div class="digit-bottom minute-digit-tens">0</div>
-                </div>
-                <div class="digit-bg-bottom-two" id="minute-digit-bottom-tens">
-                    <div class="digit-bottom minute-digit-tens">0</div>
+                <div class="mini-digit-container day-week-three">
+                    <div class="mini-digit-bg-top-one">
+                        <div class="mini-digit-top day-week-three-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-top-two" id="day-week-alp-top-three">
+                        <div class="mini-digit-top day-week-three-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-one">
+                        <div class="mini-digit-bottom day-week-three-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-two" id="day-week-alp-bottom-three">
+                        <div class="mini-digit-bottom day-week-three-alp">A</div>
+                    </div>
                 </div>
             </div>
-            <div class="digit-container minute-ones">
-                <div class="digit-bg-top-one">
-                    <div class="digit-top minute-digit-ones">0</div>
+            <div class="month-of-the-year">
+                <div class="mini-digit-container month-year-one">
+                    <div class="mini-digit-bg-top-one">
+                        <div class="mini-digit-top month-year-one-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-top-two" id="month-year-alp-top-one">
+                        <div class="mini-digit-top month-year-one-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-one">
+                        <div class="mini-digit-bottom month-year-one-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-two" id="month-year-alp-bottom-one">
+                        <div class="mini-digit-bottom month-year-one-alp">A</div>
+                    </div>
                 </div>
-                <div class="digit-bg-top-two" id="minute-digit-top-ones">
-                    <div class="digit-top minute-digit-ones">0</div>
+                <div class="mini-digit-container month-year-two">
+                    <div class="mini-digit-bg-top-one">
+                        <div class="mini-digit-top month-year-two-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-top-two" id="month-year-alp-top-two">
+                        <div class="mini-digit-top month-year-two-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-one">
+                        <div class="mini-digit-bottom month-year-two-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-two" id="month-year-alp-bottom-two">
+                        <div class="mini-digit-bottom month-year-two-alp">A</div>
+                    </div>
                 </div>
-                <div class="digit-bg-bottom-one">
-                    <div class="digit-bottom minute-digit-ones">0</div>
+                <div class="mini-digit-container month-year-three">
+                    <div class="mini-digit-bg-top-one">
+                        <div class="mini-digit-top month-year-three-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-top-two" id="month-year-alp-top-three">
+                        <div class="mini-digit-top month-year-three-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-one">
+                        <div class="mini-digit-bottom month-year-three-alp">A</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-two" id="month-year-alp-bottom-three">
+                        <div class="mini-digit-bottom month-year-three-alp">A</div>
+                    </div>
                 </div>
-                <div class="digit-bg-bottom-two" id="minute-digit-bottom-ones">
-                    <div class="digit-bottom minute-digit-ones">0</div>
+            </div>
+
+            <div class="year">
+                <div class="mini-digit-container year-one">
+                    <div class="mini-digit-bg-top-one">
+                        <div class="mini-digit-top year-one-alp">0</div>
+                    </div>
+                    <div class="mini-digit-bg-top-two" id="year-alp-top-one">
+                        <div class="mini-digit-top year-one-alp">0</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-one">
+                        <div class="mini-digit-bottom year-one-alp">0</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-two" id="year-alp-bottom-one">
+                        <div class="mini-digit-bottom year-one-alp">0</div>
+                    </div>
+                </div>
+                <div class="mini-digit-container year-two">
+                    <div class="mini-digit-bg-top-one">
+                        <div class="mini-digit-top year-two-alp">0</div>
+                    </div>
+                    <div class="mini-digit-bg-top-two" id="year-alp-top-two">
+                        <div class="mini-digit-top year-two-alp">0</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-one">
+                        <div class="mini-digit-bottom year-two-alp">0</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-two" id="year-alp-bottom-two">
+                        <div class="mini-digit-bottom year-two-alp">0</div>
+                    </div>
+                </div>
+                <div class="mini-digit-container year-three">
+                    <div class="mini-digit-bg-top-one">
+                        <div class="mini-digit-top year-three-alp">0</div>
+                    </div>
+                    <div class="mini-digit-bg-top-two" id="year-alp-top-three">
+                        <div class="mini-digit-top year-three-alp">0</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-one">
+                        <div class="mini-digit-bottom year-three-alp">0</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-two" id="year-alp-bottom-three">
+                        <div class="mini-digit-bottom year-three-alp">0</div>
+                    </div>
+                </div>
+                <div class="mini-digit-container year-four">
+                    <div class="mini-digit-bg-top-one">
+                        <div class="mini-digit-top year-four-alp">0</div>
+                    </div>
+                    <div class="mini-digit-bg-top-two" id="year-alp-top-four">
+                        <div class="mini-digit-top year-four-alp">0</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-one">
+                        <div class="mini-digit-bottom year-four-alp">0</div>
+                    </div>
+                    <div class="mini-digit-bg-bottom-two" id="year-alp-bottom-four">
+                        <div class="mini-digit-bottom year-four-alp">0</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="second">
-            <div class="digit-container second-tens">
-                <div class="digit-bg-top-one">
-                    <div class="digit-top second-digit-tens">0</div>
-                </div>
-                <div class="digit-bg-top-two" id="second-digit-top-tens">
-                    <div class="digit-top second-digit-tens">0</div>
-                </div>
-                <div class="digit-bg-bottom-one">
-                    <div class="digit-bottom second-digit-tens">0</div>
-                </div>
-                <div class="digit-bg-bottom-two" id="second-digit-bottom-tens">
-                    <div class="digit-bottom second-digit-tens">0</div>
-                </div>
-            </div>
-            <div class="digit-container second-ones">
-                <div class="digit-bg-top-one">
-                    <div class="digit-top second-digit-ones">0</div>
-                </div>
-                <div class="digit-bg-top-two" id="second-digit-top-ones">
-                    <div class="digit-top second-digit-ones">0</div>
-                </div>
-                <div class="digit-bg-bottom-one">
-                    <div class="digit-bottom second-digit-ones">0</div>
-                </div>
-                <div class="digit-bg-bottom-two" id="second-digit-bottom-ones">
-                    <div class="digit-bottom second-digit-ones">0</div>
-                </div>
-            </div>
+        <div class="title">
+            <h2 style="width: 25%;">DAY OF THE WEEK</h2>
+            <h2 style="width: 41%;">MONTH OF THE YEAR</h2>
+            <h2>THE YEAR</h2>
         </div>
     </div>
 

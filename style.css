@@ -1,28 +1,70 @@
-*{
+* {
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
 }
-body{
-    padding: 10px;/*silinecek*/
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
+    background-image: url("https://www.giffywalls.in/cdn/shop/collections/4_1.jpg?v=1737722044");
+    background-size: cover;
 }
-.second,.minute,.hour{
+
+h2,h1{
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    width: calc(100% / 3);
+}
+h1{
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.title {
+    display: flex;
+    position: relative;
+    text-align: center;
+    top: -10px;
+}
+
+.second,
+.minute,
+.hour {
     display: flex;
     gap: 10px;
 }
-.clock{
+
+.clock,
+.date {
     display: flex;
     gap: 20px;
-    padding:20px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     background-color: rgb(29, 29, 29);
     border-radius: 20px;
 }
-.digit-container{
+
+.date {
+    gap: 70px;
+}
+
+.clock-container {
+    display: flex;
+    padding: 20px;
+    background-color: rgb(29, 29, 29);
+    border-radius: 20px;
+    flex-direction: column;
+    box-shadow: 0px 10px 20px black;
+}
+
+.digit-container,
+.mini-digit-container {
     width: 140px;
     height: 204px;
     font-size: 10rem;
@@ -32,9 +74,19 @@ body{
     position: relative;
     perspective: 800px;
     line-height: 1.25;
-    box-shadow:0px 0px 10px black;
+    box-shadow: 0px 0px 10px black;
 }
-.digit-bg-top-one, .digit-bg-top-two{
+
+.mini-digit-container {
+    width: 70px;
+    height: 102px;
+    font-size: 5rem;
+}
+
+.digit-bg-top-one,
+.digit-bg-top-two,
+.mini-digit-bg-top-one,
+.mini-digit-bg-top-two {
     background-color: #202020;
     width: 140px;
     height: 102px;
@@ -45,7 +97,12 @@ body{
     display: flex;
     justify-content: center;
 }
-.digit-bg-bottom-one, .digit-bg-bottom-two{
+
+
+.digit-bg-bottom-one,
+.digit-bg-bottom-two,
+.mini-digit-bg-bottom-one,
+.mini-digit-bg-bottom-two {
     background-color: #171717;
     width: 140px;
     height: 102px;
@@ -58,44 +115,81 @@ body{
     display: flex;
     justify-content: center;
 }
-.digit-bottom{
+
+.mini-digit-bg-top-one,
+.mini-digit-bg-top-two,
+.mini-digit-bg-bottom-one,
+.mini-digit-bg-bottom-two {
+    width: 70px;
+    height: 51px;
+    border-bottom: 1px solid black;
+}
+
+.digit-bottom,
+.mini-digit-bottom {
     position: relative;
     top: -102px;
 }
 
-.digit-bg-top-two{
+.mini-digit-bottom {
+    top: -51px;
+}
+
+.digit-bg-top-two,
+.mini-digit-bg-top-two {
     position: absolute;
-    /*background-color: red;*/
     transform-origin: bottom;
     top: 0px;
     transform: rotateX(0deg);
 }
-.digit-bg-bottom-two{
-    /*background-color: green;*/
+
+.digit-bg-bottom-two,
+.mini-digit-bg-bottom-two {
     position: absolute;
     transform-origin: top;
     top: 102px;
     transform: rotateX(90deg);
 }
-.flip-top{
+
+.mini-digit-bg-bottom-two {
+    top: 51px;
+}
+
+.flip-top {
     animation: flip-top 1s infinite linear;
 }
-.flip-bottom{
+
+.flip-bottom {
     animation: flip-bottom 1s infinite linear;
 }
+
 @keyframes flip-top {
-    0%{
+    0% {
         transform: rotateX(0deg);
     }
-    50%,100%{
+
+    50%,
+    100% {
         transform: rotateX(-90deg);
     }
 }
+
 @keyframes flip-bottom {
-    0%,50%{
+
+    0%,
+    50% {
         transform: rotateX(90deg);
     }
-    100%{
+
+    100% {
         transform: rotateX(0deg);
     }
+}
+
+.day-of-the-week,
+.month-of-the-year,
+.year {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
